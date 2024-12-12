@@ -1,10 +1,9 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import {  createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
  username: '',
-
-}
+} 
 
 
 const userSlice = createSlice({
@@ -15,8 +14,8 @@ const userSlice = createSlice({
    state.username = action.payload;
   }
  }
-})
+}) 
 
-export const {updateName} = userSlice.actions;
+export const { updateName } = userSlice.actions;
 
-export default userSlice.reducer;  
+export default userSlice.reducer; 

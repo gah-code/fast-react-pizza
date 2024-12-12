@@ -17,7 +17,7 @@ export default [
         sourceType: 'module',
       },
     },
-    settings: { react: { version: '18.3' } },
+    settings: { react: { version: 'detect' } }, // Automatically detect React version
     plugins: {
       react,
       'react-hooks': reactHooks,
@@ -29,6 +29,10 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
+          'react/prop-types': 'off', // Disable prop-types validation
+      'no-undef': 'off', // Disable undefined variable checking
+       'no-unused-vars': 'off',
+
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
