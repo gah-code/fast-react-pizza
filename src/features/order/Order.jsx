@@ -1,7 +1,6 @@
 // Test ID: IIDSAT
 
 import OrderItem from './OrderItem';
-
 import { useLoaderData } from 'react-router-dom';
 import { getOrder } from '../../services/apiRestaurant';
 import {
@@ -56,7 +55,7 @@ function Order() {
 
       <ul className='dive-stone-200 divide-y border-b border-t'>
         {cart.map((item) => (
-          <OrderItem item={item} key={item.Id} />
+          <OrderItem item={item} key={item.pizzaId} />
         ))}
       </ul>
 
