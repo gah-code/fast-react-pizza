@@ -1,5 +1,7 @@
 const API_URL = 'https://react-fast-pizza-api.jonas.io/api';
 
+
+
 export async function getMenu() {
   const res = await fetch(`${API_URL}/menu`);
 
@@ -9,6 +11,9 @@ export async function getMenu() {
   const { data } = await res.json();
   return data;
 }
+
+
+
 
 export async function getOrder(id) {
   const res = await fetch(`${API_URL}/order/${id}`);
@@ -48,7 +53,7 @@ export async function updateOrder(id, updateObj) {
 
     if (!res.ok) throw Error();
     // We don't need the data, so we don't return anything
-  // eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
   } catch (err) {
     throw Error('Failed updating your order');
   }

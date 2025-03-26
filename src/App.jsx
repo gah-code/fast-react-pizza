@@ -8,11 +8,7 @@ import CreateOrder, {
 } from './features/order/CreateOrder';
 import Order, { loader as orderLoader } from './features/order/Order';
 import Error from './ui/Error';
-// Import AppLayout and Error components if they will be used
-// import AppLayout from './components/AppLayout';
-// import Error from './components/Error';
-// Import the menuLoader if you intend to use data loaders
-// import { menuLoader } from './features/menu/menuLoader';
+
 
 const router = createBrowserRouter([
   {
